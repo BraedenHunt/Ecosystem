@@ -19,7 +19,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".BioticListView"></activity>
+        <activity
+            android:name=".BioticListView"
+            android:label="Biotic" />
+        <activity
+            android:name=".ProducersListView"
+            android:label="Producers" />
+        <activity android:name=".AttributeDisplayer"></activity>
     </application>
 
 </manifest>
