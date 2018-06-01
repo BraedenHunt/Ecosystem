@@ -26,9 +26,11 @@ public class MainActivity extends AppCompatActivity {
         biotic.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), ListViewer.class);
+                Intent intent = new Intent(getApplicationContext(), BioticListView.class);
                 startActivity(intent);
             }
         });
+
+
     }
 }
