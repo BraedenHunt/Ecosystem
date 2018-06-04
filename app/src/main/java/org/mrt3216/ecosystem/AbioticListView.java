@@ -15,7 +15,7 @@ public class AbioticListView extends AppCompatActivity {
     private Attribute Climate = new Attribute("Climate", "the cliamte is...", R.drawable.tundra);
     private Attribute HumanImpacts = new Attribute("Human Impacts", "Humans impact the arctic tundra by...", R.drawable.tundra);
     private Attribute Other = new Attribute("Other", "", R.drawable.tundra);
-    
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

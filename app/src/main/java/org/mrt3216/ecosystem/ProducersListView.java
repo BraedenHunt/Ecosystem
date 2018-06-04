@@ -11,8 +11,11 @@ import android.widget.ListView;
 public class ProducersListView extends AppCompatActivity {
     private ListView listView;
     private String[] strings = new String[] {"Thistles", "Fireweed", "Grasses"};
-    private Attribute Thistles = new Attribute("Thistles", "Description goes here", R.drawable.thistle);
-    private Attribute Fireweed = new Attribute("Fireweed", "Desc", R.drawable.fireweed);
+    private Attribute Thistles = new Attribute("Thistles", "The Arctic Glow Globe Thistle is a producer in the Arctic Tundra." +
+            " It is commonly eaten by pikas. One of its adaptations is its taste, which deters deer from eating it. Another adaption is " +
+            "its ability to survive drought, which is important because of the little amounts of percipitation the Arctic Tundra receives.", R.drawable.thistle);
+    private Attribute Fireweed = new Attribute("Fireweed", "Fireweed is a producer for the Arctic Tundra. It is mainly eaten by" +
+            " pikas. Its adaptation of shallow root systems allow it to grow in a variety of ecosystems, including the Arctic Tundra", R.drawable.fireweed);
     private Attribute Grasses  = new Attribute("Grasses", "desc", R.drawable.grasses);
 
     @Override
