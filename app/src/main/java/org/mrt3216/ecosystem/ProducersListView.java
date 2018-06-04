@@ -11,9 +11,9 @@ import android.widget.ListView;
 public class ProducersListView extends AppCompatActivity {
     private ListView listView;
     private String[] strings = new String[] {"Thistles", "Fireweed", "Grasses"};
-    private Attribute Thistles = new Attribute("Thistles", "Description goes here", R.drawable.tundra);
-    private Attribute Fireweed = new Attribute("Fireweed", "Desc", R.drawable.tundra);
-    private Attribute Grasses  = new Attribute("Grasses", "desc", R.drawable.tundra);
+    private Attribute Thistles = new Attribute("Thistles", "Description goes here", R.drawable.thistle);
+    private Attribute Fireweed = new Attribute("Fireweed", "Desc", R.drawable.fireweed);
+    private Attribute Grasses  = new Attribute("Grasses", "desc", R.drawable.grasses);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

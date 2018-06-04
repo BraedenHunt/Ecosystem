@@ -11,9 +11,9 @@ import android.widget.ListView;
 public class ConsumersListView extends AppCompatActivity {
     private ListView listView;
     private String[] strings = new String[] {"Primary: Pika ", "Secondary: Arctic Fox"," Tertiary: Arctic Wolf"};
-    private Attribute Pika = new Attribute("Pika", "Desc", R.drawable.tundra);
-    private Attribute Fox = new Attribute("Arctic Fox", "desc", R.drawable.tundra);
-    private Attribute Wolf = new Attribute("Arctic Wolf", "desc", R.drawable.tundra);
+    private Attribute Pika = new Attribute("Pika", "Desc", R.drawable.pika);
+    private Attribute Fox = new Attribute("Arctic Fox", "desc", R.drawable.fox);
+    private Attribute Wolf = new Attribute("Arctic Wolf", "desc", R.drawable.wolf);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
