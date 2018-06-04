@@ -10,7 +10,10 @@ import android.widget.ListView;
 
 public class BioticListView extends AppCompatActivity {
     private ListView listView;
-    private String[] strings = new String[] {"Producers", "Consumers", "Decomposers"};
+    private String[] strings = new String[] {"Food Web", "Producers", "Consumers", "Decomposers", "Resources"};
+    private Attribute Lichen = new Attribute("Lichen", "desc", R.drawable.tundra);
+    private Attribute Resources = new Attribute("Resources", "Water and food...", R.drawable.tundra);
+    private Attribute FoodWeb = new Attribute("Food Web", "", R.drawable.tundra);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +32,25 @@ public class BioticListView extends AppCompatActivity {
                 final String item = (String) parent.getItemAtPosition(position);
                 if(item.equals("Producers")) {
                     Intent intent = new Intent(getApplicationContext(), ProducersListView.class);
+                    startActivity(intent);
+                }
+                if(item.equals("Consumers")){
+                    Intent intent = new Intent(getApplicationContext(), ConsumersListView.class);
+                    startActivity(intent);
+                }
+                if(item.equals("Decomposers")) {
+                    Intent intent = new Intent(getApplicationContext(), AttributeDisplayer.class);
+                    intent.putExtra("attribute", Lichen);
+                    startActivity(intent);
+                }
+                if(item.equals("Resources")) {
+                    Intent intent = new Intent(getApplicationContext(), AttributeDisplayer.class);
+                    intent.putExtra("attribute", Resources);
+                    startActivity(intent);
+                }
+                if(item.equals("Food Web")) {
+                    Intent intent = new Intent(getApplicationContext(), AttributeDisplayer.class);
+                    intent.putExtra("attribute", FoodWeb);
                     startActivity(intent);
                 }
             }

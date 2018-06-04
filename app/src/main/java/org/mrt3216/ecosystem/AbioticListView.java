@@ -8,13 +8,14 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-public class ConsumersListView extends AppCompatActivity {
+public class AbioticListView extends AppCompatActivity {
     private ListView listView;
-    private String[] strings = new String[] {"Primary: Pika ", "Secondary: Arctic Fox"," Tertiary: Arctic Wolf"};
-    private Attribute Pika = new Attribute("Pika", "Desc", R.drawable.tundra);
-    private Attribute Fox = new Attribute("Arctic Fox", "desc", R.drawable.tundra);
-    private Attribute Wolf = new Attribute("Arctic Wolf", "desc", R.drawable.tundra);
-
+    private String[] strings = new String[] {"Biome", "Climate", "Human Impacts", "Other"};
+    private Attribute Biome = new Attribute("Biome", "the biome is...", R.drawable.tundra);
+    private Attribute Climate = new Attribute("Climate", "the cliamte is...", R.drawable.tundra);
+    private Attribute HumanImpacts = new Attribute("Human Impacts", "Humans impact the arctic tundra by...", R.drawable.tundra);
+    private Attribute Other = new Attribute("Other", "", R.drawable.tundra);
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,19 +31,24 @@ public class ConsumersListView extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, final View view, int position, long id) {
                 final String item = (String) parent.getItemAtPosition(position);
-                if(position == 0) {
+                if(item.equals("Biome")) {
                     Intent intent = new Intent(getApplicationContext(), AttributeDisplayer.class);
-                    intent.putExtra("attribute", Pika);
+                    intent.putExtra("attribute", Biome);
                     startActivity(intent);
                 }
-                if(position == 1) {
+                if(item.equals("Climate")){
                     Intent intent = new Intent(getApplicationContext(), AttributeDisplayer.class);
-                    intent.putExtra("attribute", Fox);
+                    intent.putExtra("attribute", Climate);
                     startActivity(intent);
                 }
-                if(position == 2) {
+                if(item.equals("Human Impacts")) {
                     Intent intent = new Intent(getApplicationContext(), AttributeDisplayer.class);
-                    intent.putExtra("attribute", Wolf);
+                    intent.putExtra("attribute", HumanImpacts);
+                    startActivity(intent);
+                }
+                if(item.equals("Other")) {
+                    Intent intent = new Intent(getApplicationContext(), AttributeDisplayer.class);
+                    intent.putExtra("attribute", Other);
                     startActivity(intent);
                 }
             }

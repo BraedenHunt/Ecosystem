@@ -23,8 +23,14 @@
             android:name=".BioticListView"
             android:label="Biotic" />
         <activity
-            android:name=".ProducersListView"
-            android:label="Producers" />
+        android:name=".ProducersListView"
+        android:label="Producers" />
+        <activity
+            android:name=".ConsumersListView"
+            android:label="Consumers" />
+        <activity
+            android:name=".AbioticListView"
+            android:label="Abiotic" />
         <activity android:name=".AttributeDisplayer"></activity>
     </application>
 
